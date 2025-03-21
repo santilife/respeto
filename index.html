@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frases de Respeto</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .message-card {
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      #mensaje-respeto {
+        font-size: 1.8rem;
+        color: #333;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      .autor {
+        font-style: italic;
+        margin-top: 20px;
+        color: #777;
+      }
+
+      @media (max-width: 480px) {
+        .message-card {
+          border-radius: 10px;
+          padding: 30px 15px;
+        }
+
+        #mensaje-respeto {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="message-card">
+        <p id="mensaje-respeto"></p>
+        <p class="autor" id="autor"></p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Array de frases de respeto con autores
+        const frases = [
+          {
+            texto: "El respeto es el fundamento de toda convivencia humana.",
+            autor: "Confucio",
+          },
+          {
+            texto: "Trata a los demás como te gustaría que te trataran a ti.",
+            autor: "Regla de oro",
+          },
+          {
+            texto:
+              "Respetar es comprender que todos somos diferentes y valiosos.",
+            autor: "Dalai Lama",
+          },
+          {
+            texto: "El respeto mutuo construye puentes donde hay diferencias.",
+            autor: "Mahatma Gandhi",
+          },
+          {
+            texto: "La base del respeto es escuchar antes de hablar.",
+            autor: "Anónimo",
+          },
+          {
+            texto: "Respeta para ser respetado, es un camino de ida y vuelta.",
+            autor: "Séneca",
+          },
+          {
+            texto: "Respetar las opiniones ajenas enriquece tu perspectiva.",
+            autor: "Aristóteles",
+          },
+          {
+            texto: "El respeto es un reflejo de tu propia dignidad.",
+            autor: "Ralph Waldo Emerson",
+          },
+          {
+            texto:
+              "Con respeto, hasta los desacuerdos se convierten en oportunidades.",
+            autor: "Nelson Mandela",
+          },
+          {
+            texto:
+              "El verdadero respeto nace de reconocer la humanidad en cada persona.",
+            autor: "Martin Luther King Jr.",
+          },
+        ];
+
+        // Seleccionar una frase aleatoria
+        const fraseAleatoria =
+          frases[Math.floor(Math.random() * frases.length)];
+
+        // Mostrar la frase y el autor
+        document.getElementById("mensaje-respeto").textContent =
+          fraseAleatoria.texto;
+        document.getElementById("autor").textContent =
+          "— " + fraseAleatoria.autor;
+      });
+    </script>
+  </body>
+</html>
